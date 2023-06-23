@@ -26,8 +26,6 @@ int main()
             else
                 oddc++;
         }
-        int evc1=evc;
-        int oddc1=oddc;
         for (int i = 0; i < q; i++)
         {
             int x, y;
