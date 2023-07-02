@@ -36,23 +36,23 @@ int main()
         int f = 0;
         for (int i = max + 1; i < 10000000; i++)
         {
-            s -= i;
+            
             // cout << s;
             if (s == 0)
             {
-                cout << "x";
-                f == 1;
+                f = 1;
                 break;
             }
             else if (s < 0)
                 break;
+            s -= i;    
         }
         if (f == 1)
         {
-            cout << "Yes" << endl;
+            cout << "YES" << endl;
         }
         else
-            cout << "No" << endl;
+            cout << "NO" << endl;
     }
 
     return 0;
