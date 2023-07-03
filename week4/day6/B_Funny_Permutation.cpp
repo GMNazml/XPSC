@@ -7,11 +7,8 @@
 #define fi first
 #define se second
 using namespace std;
-
-
 int main()
 {
-
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
@@ -19,30 +16,36 @@ int main()
     cin >> tst;
     while (tst--)
     {
-       int n;              cin>>n;
+        int n;
+        cin >> n;
 
-        if(n==3){
-            cout<<-1<<endl;
+        if (n == 3)
+        {
+            cout << -1 << endl;
             continue;
         }
-        else if(n==5){
-            cout<<"5 4 1 2 3"<<endl;
+        else if (n == 5)
+        {
+            cout << "5 4 1 2 3" << endl;
             continue;
         }
 
-        vector<int> ans(n+1);
-        for(int i=1;i<=n;i++){
-            ans[i]=(n-i+1);
+        vector<int> ans(n + 1);
+        for (int i = 1; i <= n; i++)
+        {
+            ans[i] = (n - i + 1);
         }
 
-        if(n%2==1){
-            swap(ans[(n/2)],ans[(n/2)+1]);
+        if (n % 2 != 0)
+        {
+            swap(ans[(n / 2)], ans[(n / 2) + 1]);
         }
 
-        for(int i=1;i<=n;i++){
-            cout<<ans[i]<<" ";
+        for (int i = 1; i <= n; i++)
+        {
+            cout << ans[i] << " ";
         }
-        cout<<endl; 
+        cout << endl;
     }
 
     return 0;
