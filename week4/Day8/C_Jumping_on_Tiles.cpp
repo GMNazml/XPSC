@@ -31,7 +31,7 @@ int main()
         }
 
         sort(order.begin(), order.end(), [&](pair<char, int> a, pair<char, int> b)
-             { return a.second < b.second; });
+          { return a.second < b.second; });
 
         if (order.size() > 2)
         {
