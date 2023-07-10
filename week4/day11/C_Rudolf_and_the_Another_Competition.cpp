@@ -19,9 +19,9 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        int n,m,h,a;
+        ll n,m,h,a;
         cin>>n>>m>>h;
-        vector<int>v[n];
+        vector<ll>v[n];
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 cin>>a;
@@ -31,11 +31,11 @@ int main()
         for(int i=0;i<n;i++){
             sort(v[i].begin(),v[i].end());
         }
-        vector<pair<int,int>>vp;
-        pair<int,int>sd;
+        vector<pair<int,ll>>vp;
+        pair<int,ll>sd;
         for(ll i=0;i<n;i++)
         {
-            int j,sum=0,sum1=0;
+            ll j,sum=0,sum1=0;
             for( j=0;j<m&&sum1+v[i][j]<=h;j++)
             {
                 
