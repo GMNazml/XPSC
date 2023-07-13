@@ -30,7 +30,6 @@ int main()
             if (k == b)
                 k = 0;
         }
-
         cout << x << endl;
     }
 
