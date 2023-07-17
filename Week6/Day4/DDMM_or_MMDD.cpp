@@ -8,6 +8,7 @@
 #define se second
 using namespace std;
 
+
 int main()
 {
 
@@ -18,19 +19,13 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        int n;
-        cin >> n;
-        int a[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin >> a[i];
-        }
-        for (int i = 0; i < n; i++)
-        {
-            if(a[i]==0) cout<<1<<" ";
-           else if(a[i]==1) cout<<0<<" ";
-        }
-        cout<<endl;
+        string s;
+        cin>>s;
+        if(s[0]>'1')cout<<"DD/MM/YYYY"<<endl;
+        else if(s[3]>'1')cout<<"MM/DD/YYYY"<<endl;
+        else if(s[0]=='1'&&s[1]>'2')cout<<"DD/MM/YYYY"<<endl;
+        else if(s[3]=='1'&&s[4]>'2')cout<<"MM/DD/YYYY"<<endl;
+        else cout<<"BOTH"<<endl;
     }
 
     return 0;
