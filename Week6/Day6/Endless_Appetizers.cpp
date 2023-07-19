@@ -19,13 +19,10 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;
-        cin>>s;
-        if(s[0]>'1')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]>'1')cout<<"MM/DD/YYYY"<<endl;
-        else if(s[0]=='1'&&s[1]>'2')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]=='1'&&s[4]>'2')cout<<"MM/DD/YYYY"<<endl;
-        else cout<<"BOTH"<<endl;
+        int a,b,c;
+        cin>>a>>b>>c;
+        int ans=ceil((1.0*a+(c/30))/b);
+        cout<<ans<<endl;
     }
 
     return 0;

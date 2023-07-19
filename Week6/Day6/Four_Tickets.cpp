@@ -19,13 +19,10 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;
-        cin>>s;
-        if(s[0]>'1')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]>'1')cout<<"MM/DD/YYYY"<<endl;
-        else if(s[0]=='1'&&s[1]>'2')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]=='1'&&s[4]>'2')cout<<"MM/DD/YYYY"<<endl;
-        else cout<<"BOTH"<<endl;
+        int x;
+        cin>>x;
+        if(x*4>1000)cout<<"NO"<<endl;
+        else cout<<"YES"<<endl;
     }
 
     return 0;

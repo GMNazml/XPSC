@@ -19,13 +19,20 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;
-        cin>>s;
-        if(s[0]>'1')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]>'1')cout<<"MM/DD/YYYY"<<endl;
-        else if(s[0]=='1'&&s[1]>'2')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]=='1'&&s[4]>'2')cout<<"MM/DD/YYYY"<<endl;
-        else cout<<"BOTH"<<endl;
+        int a,c=0;
+        cin>>a;
+        while(true){
+           if(a==50)break;
+           else if(a<50){
+            a+=2;
+            c++;
+           }
+           else{
+            a-=3;
+            c++;
+           }
+        }
+        cout<<c<<endl;
     }
 
     return 0;

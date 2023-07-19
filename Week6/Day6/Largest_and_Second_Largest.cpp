@@ -19,13 +19,17 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;
-        cin>>s;
-        if(s[0]>'1')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]>'1')cout<<"MM/DD/YYYY"<<endl;
-        else if(s[0]=='1'&&s[1]>'2')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]=='1'&&s[4]>'2')cout<<"MM/DD/YYYY"<<endl;
-        else cout<<"BOTH"<<endl;
+       set<int,greater<int>>s;
+       int n,a;
+       cin>>n; 
+       for(int i=0;i<n;i++){
+        cin>>a;
+        s.insert(a);
+       }
+       auto i=s.begin();
+       int ans=*i;
+       i++;ans+=*i;
+       cout<<ans<<endl;
     }
 
     return 0;

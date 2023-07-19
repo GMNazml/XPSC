@@ -19,13 +19,20 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;
-        cin>>s;
-        if(s[0]>'1')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]>'1')cout<<"MM/DD/YYYY"<<endl;
-        else if(s[0]=='1'&&s[1]>'2')cout<<"DD/MM/YYYY"<<endl;
-        else if(s[3]=='1'&&s[4]>'2')cout<<"MM/DD/YYYY"<<endl;
-        else cout<<"BOTH"<<endl;
+        int n;
+        cin>>n;
+        int a[n];
+        ll sum=0;
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+            sum+=a[i];
+        }
+        sort(a,a+n);
+        for(int i=0;i<n;i++){
+           cout<<sum<<" ";
+           sum-=a[i];
+        }
+        cout<<endl;
     }
 
     return 0;
