@@ -25,7 +25,7 @@ int main()
             cin >> a[i];
         int x = a[n - 1], c = 0;
         int y = a[0];
-        int c1 = 0,it=-1;
+        int c1 = 0, it = -1;
         if (x == y)
         {
             for (int i = 0; i < n; i++)
@@ -34,26 +34,32 @@ int main()
                     c++;
             }
         }
-        
+
         else
         {
             for (int i = 0; i < n; i++)
             {
                 if (c1 == k)
                 {
-                  it=i-1;
-                  break;
+                    it = i - 1;
+                    break;
                 }
                 if (a[i] == y)
                     c1++;
             }
-            if(it!=-1){
-            for(int j=it;j<n;j++){
-                if(a[j]==x)c++;
-            }}
+            if (it != -1)
+            {
+                for (int j = it; j < n; j++)
+                {
+                    if (a[j] == x)
+                        c++;
+                }
+            }
         }
-        if(c>=k)cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
+        if (c >= k)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
 
     return 0;
