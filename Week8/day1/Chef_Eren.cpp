@@ -8,7 +8,6 @@
 #define se second
 using namespace std;
 
-
 int main()
 {
 
@@ -19,15 +18,17 @@ int main()
     cin >> tst;
     while (tst--)
     {
-          int n,a,b;
-    cin>>n>>a>>b;
-    int total=0;
-    for(int i=1;i<=n;i++)
-    {
-        if(i%2==0) total+=a;
-        else total+=b;
-    }
-    cout<<total<<endl;
+        int n, a, b;
+        cin >> n >> a >> b;
+        int total = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            if (i % 2 == 0)
+                total += a;
+            else
+                total += b;
+        }
+        cout << total << endl;
     }
 
     return 0;

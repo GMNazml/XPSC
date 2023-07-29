@@ -8,6 +8,7 @@
 #define se second
 using namespace std;
 
+
 int main()
 {
 
@@ -18,14 +19,11 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        int a, b;
-        cin >> a >> b;
-        if (b >= a)
-            cout << 0 << endl;
-        else
-        {
-            cout << a - b << endl;
-        }
+        int b,c,h,ans;
+        cin>>b>>c>>h;
+        if(b>c+h)ans=(c+h)+(c+h+1);
+        else ans=b+(b-1);
+        cout<<ans<<endl;
     }
 
     return 0;
