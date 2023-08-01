@@ -18,20 +18,26 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        int n;
+        int n, f = 0;
         cin >> n;
-        int x[n];
-        int mihai = 0, bianca = 0;
-        for (int i = 0; i < n; i++)
-            cin >> x[i];
+        string s;
+        cin >> s;
         for (int i = 0; i < n; i++)
         {
-            if (x[i] % 2 == 0)
-                mihai += x[i];
-            else
-                bianca += x[i];
+            // char ch=s[i];
+            for (int j = i + 1; j < n; j++)
+            {
+                if (s[i] == s[j])
+                {
+                    if ((j - i) & 1)
+                    {
+                        f = 1;
+                        break;
+                    }
+                }
+            }
         }
-        if (mihai > bianca)
+        if (f == 0)
             cout << "YES" << endl;
         else
             cout << "NO" << endl;
