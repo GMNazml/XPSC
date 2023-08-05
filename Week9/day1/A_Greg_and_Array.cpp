@@ -7,9 +7,9 @@
 #define fi first
 #define se second
 using namespace std;
- long long arr[100005];
-    long long q[100005];
-    long long p[100005];
+long long arr[100005];
+long long q[100005];
+long long p[100005];
 int main()
 {
 
@@ -18,7 +18,7 @@ int main()
 
     int n, m, k;
     cin >> n >> m >> k;
-   
+
     for (int i = 1; i <= n; i++)
         cin >> arr[i];
 
