@@ -8,6 +8,7 @@
 #define se second
 using namespace std;
 
+
 int main()
 {
 
@@ -18,12 +19,13 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;
-        cin >> s;
-        string x = s;
-        reverse(x.begin(), x.end());
-        string ans = s + x;
-        cout << ans << endl;
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0;i<n;i++)cin>>a[i];
+        int mx=*max_element(a,a+n);
+        int mn=*min_element(a,a+n);
+        cout<<mx-mn<<endl;
     }
 
     return 0;
