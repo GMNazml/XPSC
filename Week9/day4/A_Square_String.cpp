@@ -8,7 +8,6 @@
 #define se second
 using namespace std;
 
-
 int main()
 {
 
@@ -19,18 +18,24 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        string s;cin>>s;
-    int n=s.size();
-    if(n%2) cout<<"NO"<<endl;
-    else{
-        bool flag=true;
-        for(int i=0;i<n/2;i++)
+        string s;
+        cin >> s;
+        int n = s.size();
+        if (n % 2)
+            cout << "NO" << endl;
+        else
         {
-            if(s[i]!=s[i+(n/2)]) flag=false;
+            bool flag = true;
+            for (int i = 0; i < n / 2; i++)
+            {
+                if (s[i] != s[i + (n / 2)])
+                    flag = false;
+            }
+            if (flag)
+                cout << "YES" << endl;
+            else
+                cout << "NO" << endl;
         }
-        if(flag) cout<<"YES"<<endl;
-        else cout<<"NO"<<endl;
-    }
     }
 
     return 0;
