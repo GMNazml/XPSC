@@ -12,18 +12,18 @@ int main()
     int i, j;
     int n, x;
     ll k;
-    cin>>n>>k;
+    cin >> n >> k;
 
     deque<int> q;
     for (i = 0; i < n; i++)
     {
-        cin>>x;
+        cin >> x;
         q.push_back(x);
     }
 
     if (k >= n)
     {
-        cout<<n;
+        cout << n;
         return 0;
     }
 
@@ -45,7 +45,7 @@ int main()
 
         if (cnt >= k)
         {
-            printf("%d", x);
+            cout<<x;
             return 0;
         }
 
