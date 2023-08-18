@@ -19,17 +19,14 @@ int main()
     cin >> tst;
     while (tst--)
     {
-        int n,ans=0;
+        ll n;
         cin>>n;
-        int a,c[102]={0};
-        for(int i=0;i<n;i++){
-            cin>>a;
-            c[a]++;
-        }
-        for(int i=0;i<102;i++){
-            if(ans<c[i])ans=c[i];
-        }
+        ll a[n];
+        for(int i=0;i<n;i++)cin>>a[i];
+        ll ans=a[0];
+        for(int i=1;i<n;i++)ans=ans&a[i];
         cout<<ans<<endl;
     }
+
     return 0;
 }
