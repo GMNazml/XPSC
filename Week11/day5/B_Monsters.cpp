@@ -32,19 +32,11 @@ int main()
             y = a[i] - (x * k);
             v.push_back({-1 * y, i + 1});
         }
-        // for (auto u : v)
-        // {
-        //     cout<<u.first<<" " << u.second << " ";
-        // }
         sort(all(v));
         for (auto u : v)
         {
             cout << u.second << " ";
         }
-        //  for (auto u : v)
-        // {
-        //     cout<<u.first<<" " << u.second << " ";
-        // }
         cout << endl;
     }
 
