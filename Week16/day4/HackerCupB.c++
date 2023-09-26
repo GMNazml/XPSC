@@ -8,22 +8,25 @@
 #define se second
 using namespace std;
 
-
 int main()
 {
 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int tst,i=0;
+    int tst, i = 0;
     cin >> tst;
     while (tst--)
     {
-        ll r,c,a,b;
-        cin>>r>>c>>a>>b;
+        ll r, c, a, b;
+        cin >> r >> c >> a >> b;
         i++;
-        if(r>c)cout<<"Case #"<<i<<": "<<"YES"<<endl;
-        else cout<<"Case #"<<i<<": "<<"NO"<<endl;
+        if (r > c)
+            cout << "Case #" << i << ": "
+                 << "YES" << endl;
+        else
+            cout << "Case #" << i << ": "
+                 << "NO" << endl;
     }
 
     return 0;
